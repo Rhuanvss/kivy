@@ -1,0 +1,36 @@
+<Gerenciador>:
+    PrimeiraTela:
+        name: "primeiratela"
+    SegundaTela:
+        name: "segundatela"
+
+<PrimeiraTela>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        padding: 30, 20
+        spacing: 20
+        orientation: 'vertical'
+        Label:
+            text: 'Saldo 0,00'
+            font_size: 24
+            color: 0, 0, 0, 1
+        BoxLayout:
+            Button:
+                text: 'Depositar'
+                on_release: app.root.current = "segundatela"
+            Button:
+                text: 'Sacar'
+                on_release: app.root.current = "segundatela"
+<SegundaTela>:
+    BoxLayout:
+        TextInput: 
+            input_filter: 'float'
+            multiline: False
+        Button:
+            orientation: 'vertical'
+            text: 'voltar'
+            on_release: app.root.current = "primeiratela"
+                
