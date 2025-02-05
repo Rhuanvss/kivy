@@ -1,0 +1,15 @@
+<FinanceApp>:
+    orientation: 'vertical'
+    Label:
+        id: saldo_label
+        text: "Saldo Total: R$ 0.00"
+        font_size: '24sp'
+        size_hint: (1, 0.2)
+    BoxLayout:
+        size_hint: (1, 0.2)
+        Button:
+            text: "Adicionar Dinheiro"
+            on_press: root.adicionar_dinheiro()
+        Button:
+            text: "Sacar Dinheiro"
+            on_press: root.sacar_dinheiro()
